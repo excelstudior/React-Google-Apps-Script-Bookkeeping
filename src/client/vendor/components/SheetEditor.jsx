@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Button, ListGroup } from 'react-bootstrap';
-import FormInput from './FormInput';
+import { VENDOR, HTML_VENDOR_FORM } from '../../../shared/constants';
+// import FormInput from './FormInput';
 
 // This is a wrapper for google.script.run that lets us use promises.
 import {
@@ -17,38 +18,27 @@ const SheetEditor = () => {
     serverFunctions.getSheetsData().then(setNames).catch(alert);
   }, []);
 
-  const deleteSheet = (sheetIndex) => {
-    serverFunctions.deleteSheet(sheetIndex).then(setNames).catch(alert);
-  };
+  // const setActiveSheet = (sheetName) => {
+  //   serverFunctions.setActiveSheet(sheetName).then(setNames).catch(alert);
+  // };
 
-  const setActiveSheet = (sheetName) => {
-    serverFunctions.setActiveSheet(sheetName).then(setNames).catch(alert);
-  };
-
-  const submitNewSheet = async (newSheetName) => {
-    try {
-      const response = await serverFunctions.addSheet(newSheetName);
-      setNames(response);
-    } catch (error) {
-      // eslint-disable-next-line no-alert
-      alert(error);
-    }
-  };
+  // const submitNewSheet = async (newSheetName) => {
+  //   try {
+  //     const response = await serverFunctions.addSheet(newSheetName);
+  //     setNames(response);
+  //   } catch (error) {
+  //     // eslint-disable-next-line no-alert
+  //     alert(error);
+  //   }
+  // };
 
   return (
     <div style={{ padding: '3px', overflowX: 'hidden' }}>
       <p>
-        <b>☀️ Bootstrap demo! ☀️</b>
+        <b>☀️ {VENDOR} ☀️</b>
       </p>
-      <p>
-        This is a sample app that uses the <code>react-bootstrap</code> library
-        to help us build a simple React app. Enter a name for a new sheet, hit
-        enter and the new sheet will be created. Click the red{' '}
-        <span className="text-danger">&times;</span> next to the sheet name to
-        delete it.
-      </p>
-      <FormInput submitNewSheet={submitNewSheet} />
-      <ListGroup>
+      {/* <FormInput submitNewSheet={submitNewSheet} /> */}
+      {/* <ListGroup>
         <TransitionGroup className="sheet-list">
           {names.length > 0 &&
             names.map((name) => (
@@ -80,8 +70,8 @@ const SheetEditor = () => {
               </CSSTransition>
             ))}
         </TransitionGroup>
-      </ListGroup>
-      {names.length > 0 && (
+      </ListGroup> */}
+      {/* {names.length > 0 && (
         <div className="d-flex justify-content-end py-3">
           {!isExpanded ? (
             <Button
@@ -103,7 +93,7 @@ const SheetEditor = () => {
             Close Dialog Window
           </Button>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

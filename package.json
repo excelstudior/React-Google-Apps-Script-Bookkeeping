@@ -1,8 +1,8 @@
 {
-  "name": "react-google-apps-script",
-  "version": "3.1.0",
+  "name": "react-google-apps-script-bookkeeping",
+  "version": "1.0.0",
   "type": "module",
-  "description": "Starter project for using React with Google Apps Script",
+  "description": "Bookkeeping app using React with Google Apps Script",
   "repository": {
     "type": "git",
     "url": "https://github.com/enuchi/React-Google-Apps-Script.git"
@@ -31,7 +31,7 @@
     "script",
     "sheets"
   ],
-  "author": "Elisha Nuchi",
+  "author": "ExcelStudior",
   "license": "MIT",
   "engines": {
     "node": ">=10.0.0",
