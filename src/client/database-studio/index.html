@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <base target="_top" />
     <!-- Add any external scripts and stylesheets here -->
@@ -17,10 +17,6 @@
     ></script>
     <script
       crossorigin
-      src="https://unpkg.com/react-bootstrap@2.4.0/dist/react-bootstrap.min.js"
-    ></script>
-    <script
-      crossorigin
       src="https://unpkg.com/gas-client@1.2.0/dist/index.js"
     ></script>
     <script
@@ -33,17 +29,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database Studio Dashboard</title>
   </head>
-  <body>
-    <section id="index">
-      <script type="module" src="./index.jsx"></script>
-      <!-- bundled js and css will get inlined here during build-->
-    </section>
+  <body class="bg-slate-900 text-slate-100 min-h-screen">
+    <div id="app"></div>
+    <script type="module" src="./main.jsx"></script>
   </body>
 </html>

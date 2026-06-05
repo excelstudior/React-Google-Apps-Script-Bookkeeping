@@ -16,9 +16,9 @@ const devServerWrapper = './dev/dev-server-wrapper.html';
 
 const clientEntrypoints = [
   {
-    name: 'CLIENT - Dialog Demo Bootstrap',
-    filename: 'dialog-demo-bootstrap',
-    template: 'dialog-demo-bootstrap/index.html',
+    name: 'CLIENT - Database Studio',
+    filename: 'database-studio',
+    template: 'database-studio/index.html',
   },
 ];
 
